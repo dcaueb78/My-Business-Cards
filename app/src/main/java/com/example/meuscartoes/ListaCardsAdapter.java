@@ -36,6 +36,8 @@ public class ListaCardsAdapter extends RecyclerView.Adapter<ListaCardsAdapter.Li
             super(itemView);
 
             textTituloCard = itemView.findViewById(R.id.text_titulo_card);
+
+            textTituloCard.setText("Cartão showwww");
         }
     }
 }
