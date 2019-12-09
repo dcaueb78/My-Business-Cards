@@ -20,12 +20,12 @@ public class ListaCardsAdapter extends RecyclerView.Adapter<ListaCardsAdapter.Li
 
     @Override
     public void onBindViewHolder(@NonNull ListaCardsViewHolder holder, int position) {
-
+        holder.textTituloCard.setText("Cartão showwww");
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return 5;
     }
 
     static class ListaCardsViewHolder extends RecyclerView.ViewHolder {
@@ -37,7 +37,6 @@ public class ListaCardsAdapter extends RecyclerView.Adapter<ListaCardsAdapter.Li
 
             textTituloCard = itemView.findViewById(R.id.text_titulo_card);
 
-            textTituloCard.setText("Cartão showwww");
         }
     }
 }

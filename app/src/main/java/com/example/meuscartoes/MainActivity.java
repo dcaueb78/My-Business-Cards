@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView.LayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerCartoes.setLayoutManager(linearLayoutManager);
-//        recyclerCartoes.setAdapter();
+        recyclerCartoes.setAdapter(new ListaCardsAdapter());
     }
 
     private View.OnClickListener addButton = new View.OnClickListener() {
