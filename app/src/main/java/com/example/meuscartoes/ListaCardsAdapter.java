@@ -1,5 +1,6 @@
 package com.example.meuscartoes;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -11,6 +12,8 @@ public class ListaCardsAdapter extends RecyclerView.Adapter<ListaCardsAdapter.Li
     @NonNull
     @Override
     public ListaCardsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+//        View view = LayoutInflater.from(parent.getContext()).inflate();
+
         return null;
     }
 
