@@ -1,6 +1,8 @@
 package com.example.meuscartoes;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
@@ -20,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
 
         FloatingActionButton btnAdd = findViewById(R.id.btnCreate);
         btnAdd.setOnClickListener(addButton);
+
+        RecyclerView recyclerCartoes = findViewById(R.id.recyclerView);
+
+        RecyclerView.LayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        recyclerCartoes.setLayoutManager(linearLayoutManager);
+//        recyclerCartoes.setAdapter();
     }
 
     private View.OnClickListener addButton = new View.OnClickListener() {
