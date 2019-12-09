@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import data.model.Card;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
