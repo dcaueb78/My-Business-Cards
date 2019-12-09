@@ -25,7 +25,7 @@ public class ListaCardsAdapter extends RecyclerView.Adapter<ListaCardsAdapter.Li
 
     @Override
     public int getItemCount() {
-        return 5;
+        return 20;
     }
 
     static class ListaCardsViewHolder extends RecyclerView.ViewHolder {
