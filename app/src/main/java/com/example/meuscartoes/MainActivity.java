@@ -13,6 +13,10 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.List;
+
 import data.model.Card;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView.LayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerCartoes.setLayoutManager(linearLayoutManager);
-        recyclerCartoes.setAdapter(new ListaCardsAdapter());
+        recyclerCartoes.setAdapter(new ListaCardsAdapter(criaCards()));
     }
 
     private View.OnClickListener addButton = new View.OnClickListener() {
@@ -42,4 +46,13 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
         }
     };
+
+    private List<Card> criaCards() {
+        return Arrays.asList(
+                new Card("Tarefa 1"),
+                new Card("Tarefa 2"),
+                new Card("Tarefa 3"),
+                new Card("Tarefa 4")
+        );
+    }
 }
