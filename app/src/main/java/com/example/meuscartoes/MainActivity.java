@@ -79,6 +79,11 @@ public class MainActivity extends AppCompatActivity {
                 new Card("Cauê - Geosapiens", "Desenvolvedor ReactJS", "99715-3169"),
                 new Card("Pleez", "Aplicativo que vai revolucionar a forma como garçons atendem seus clientes", "www.pleez.com"),
                 new Card("GeoSapiens", "GeoSapiens Tecnologia e Informação LTDA", "www.geosapiens.com.br"),
+                new Card("Qualyteam", "Ideal para atendimento à norma ISO 9001", "www.qualyteam.com"),
+                new Card("Pleez", "Aplicativo que vai revolucionar a forma como garçons atendem seus clientes", "www.pleez.com"),
+                new Card("GeoSapiens", "GeoSapiens Tecnologia e Informação LTDA", "www.geosapiens.com.br"),
+                new Card("Pleez", "Aplicativo que vai revolucionar a forma como garçons atendem seus clientes", "www.pleez.com"),
+                new Card("GeoSapiens", "GeoSapiens Tecnologia e Informação LTDA", "www.geosapiens.com.br"),
                 new Card("Qualyteam", "Ideal para atendimento à norma ISO 9001", "www.qualyteam.com")
         );
     }
