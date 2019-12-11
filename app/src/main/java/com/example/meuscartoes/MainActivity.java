@@ -67,9 +67,6 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener addButton = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Toast toast=Toast.makeText(getApplicationContext(),"Hello batatinha",Toast.LENGTH_SHORT);
-            toast.show();
-
             Intent intent = new Intent(MainActivity.this, cadastro.class);
             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
         }

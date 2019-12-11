@@ -14,11 +14,13 @@
         android:text="TextView"
         android:textSize="26dp"
         android:textStyle="bold"
+        android:textColor="#047047"
         tools:text="Titulo" />
 
     <TextView
         android:id="@+id/descrição"
         android:layout_width="328dp"
+        android:textColor="#C1C1C1"
         android:layout_height="wrap_content"
         android:text="Descricao" />
 
