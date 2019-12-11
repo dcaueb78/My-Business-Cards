@@ -5,6 +5,6 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface CardsService {
-    @GET("users/dcaueb78/repos")
+    @GET("/users/dcaueb78")
     Call<ResponseBody> obterCardsPopulares();
 }
