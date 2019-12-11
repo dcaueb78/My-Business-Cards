@@ -18,6 +18,11 @@ import java.util.Arrays;
 import java.util.List;
 
 import data.model.Card;
+import network.ApiService;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +35,20 @@ public class MainActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(addButton);
 
         RecyclerView recyclerCartoes = findViewById(R.id.recyclerView);
+
+        ApiService.getInstance()
+                .obterCardsPopulares()
+                .enqueue(new Callback<ResponseBody>() {
+                    @Override
+                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+
+                    }
+                })
 
         RecyclerView.LayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerCartoes.setLayoutManager(linearLayoutManager);
