@@ -11,14 +11,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import data.model.Card;
+import network.response.CardsResponse;
 
 public class ListaCardsAdapter extends RecyclerView.Adapter<ListaCardsAdapter.ListaCardsViewHolder> {
+
 
     private List<Card> cards;
 
     public ListaCardsAdapter(List<Card> cards) {
         this.cards = cards;
     }
+
+//    private List<CardsResponse> cards;
+
+//    public ListaCardsAdapter(List<CardsResponse> cards) {
+//        this.cards = cards;
+//    }
+
 
     @NonNull
     @Override
@@ -31,6 +40,7 @@ public class ListaCardsAdapter extends RecyclerView.Adapter<ListaCardsAdapter.Li
     @Override
     public void onBindViewHolder(@NonNull ListaCardsViewHolder holder, int position) {
         holder.textTituloCard.setText(cards.get(position).getNome());
+        holder.textDescricaoCard.setText(cards.get(position).getDescricao());
     }
 
     @Override
@@ -41,11 +51,13 @@ public class ListaCardsAdapter extends RecyclerView.Adapter<ListaCardsAdapter.Li
     static class ListaCardsViewHolder extends RecyclerView.ViewHolder {
 
         private TextView textTituloCard;
+        private TextView textDescricaoCard;
 
         public ListaCardsViewHolder(@NonNull View itemView) {
             super(itemView);
 
             textTituloCard = itemView.findViewById(R.id.text_titulo_card);
+            textDescricaoCard = itemView.findViewById(R.id.descrição);
 
         }
     }

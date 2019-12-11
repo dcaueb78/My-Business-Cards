@@ -10,7 +10,7 @@ public class ApiService {
     public static CardsService getInstance() {
         if(INSTANCE == null ) {
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("https://api.github.com/")
+                    .baseUrl("http://localhost:3333")
                     .addConverterFactory(MoshiConverterFactory.create())
                     .build();
 

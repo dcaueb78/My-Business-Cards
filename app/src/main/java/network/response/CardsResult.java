@@ -5,7 +5,7 @@ import com.squareup.moshi.Json;
 import java.util.List;
 
 public class CardsResult {
-    @Json(name = "login")
+    @Json(name = "name")
     private final List<CardsResponse> resultadoCards;
 
     public CardsResult(List<CardsResponse> resultadoCards) {

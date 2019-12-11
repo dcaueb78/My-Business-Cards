@@ -19,12 +19,15 @@ import java.util.List;
 
 import data.model.Card;
 import network.ApiService;
-import okhttp3.ResponseBody;
+import network.response.CardsResult;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
+
+    RecyclerView recyclerCartoes;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,20 +39,26 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView recyclerCartoes = findViewById(R.id.recyclerView);
 
-        ApiService.getInstance()
-                .obterCardsPopulares()
-                .enqueue(new Callback<ResponseBody>() {
-                    @Override
-                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-
-                    }
-
-                    @Override
-                    public void onFailure(Call<ResponseBody> call, Throwable t) {
-
-                    }
-                })
-
+//        recyclerCartoes = findViewById(R.id.recyclerView);
+//
+//        ApiService.getInstance()
+//                .obterCardsPopulares()
+//                .enqueue(new Callback<CardsResult>() {
+//                    @Override
+//                    public void onResponse(Call<CardsResult> call, Response<CardsResult> response) {
+//                        if(response.isSuccessful()){
+//                            response.body().getResultadoCards();
+//                            RecyclerView.LayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this);
+//                            recyclerCartoes.setLayoutManager(linearLayoutManager);
+//                            recyclerCartoes.setAdapter(new ListaCardsAdapter(response.body().getResultadoCards()));
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<CardsResult> call, Throwable t) {
+//
+//                    }
+//                });
         RecyclerView.LayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerCartoes.setLayoutManager(linearLayoutManager);
         recyclerCartoes.setAdapter(new ListaCardsAdapter(criaCards()));
@@ -68,10 +77,10 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Card> criaCards() {
         return Arrays.asList(
-                new Card("Tarefa 1"),
-                new Card("Tarefa 2"),
-                new Card("Tarefa 3"),
-                new Card("Tarefa 4")
+                new Card("Cauê - Geosapiens", "Desenvolvedor ReactJS"),
+                new Card("Pleez", "Aplicativo que vai revolucionar a forma como garçons atendem seus clientes"),
+                new Card("GeoSapiens", "GeoSapiens Tecnologia e Informação LTDA"),
+                new Card("Qualyteam", "Ideal para atendimento à norma ISO 9001")
         );
     }
 }
