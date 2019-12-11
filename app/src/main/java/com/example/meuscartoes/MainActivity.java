@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
 //                    @Override
 //                    public void onFailure(Call<CardsResult> call, Throwable t) {
 //
+//                        Toast toast=Toast.makeText(getApplicationContext(),"Falha ao conectar!",Toast.LENGTH_SHORT);
+//                        toast.show();
 //                    }
 //                });
         RecyclerView.LayoutManager linearLayoutManager = new LinearLayoutManager(this);
@@ -74,10 +76,10 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Card> criaCards() {
         return Arrays.asList(
-                new Card("Cauê - Geosapiens", "Desenvolvedor ReactJS"),
-                new Card("Pleez", "Aplicativo que vai revolucionar a forma como garçons atendem seus clientes"),
-                new Card("GeoSapiens", "GeoSapiens Tecnologia e Informação LTDA"),
-                new Card("Qualyteam", "Ideal para atendimento à norma ISO 9001")
+                new Card("Cauê - Geosapiens", "Desenvolvedor ReactJS", "99715-3169"),
+                new Card("Pleez", "Aplicativo que vai revolucionar a forma como garçons atendem seus clientes", "www.pleez.com"),
+                new Card("GeoSapiens", "GeoSapiens Tecnologia e Informação LTDA", "www.geosapiens.com.br"),
+                new Card("Qualyteam", "Ideal para atendimento à norma ISO 9001", "www.qualyteam.com")
         );
     }
 }

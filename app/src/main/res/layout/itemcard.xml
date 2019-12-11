@@ -24,4 +24,12 @@
         android:layout_height="wrap_content"
         android:text="Descricao" />
 
+    <TextView
+        android:id="@+id/Contato"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:text="Telefone"
+        android:textStyle="bold"
+        android:textColor="#C1C1C1" />
+
 </LinearLayout>

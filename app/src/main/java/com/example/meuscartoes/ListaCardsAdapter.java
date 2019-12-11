@@ -41,6 +41,7 @@ public class ListaCardsAdapter extends RecyclerView.Adapter<ListaCardsAdapter.Li
     public void onBindViewHolder(@NonNull ListaCardsViewHolder holder, int position) {
         holder.textTituloCard.setText(cards.get(position).getNome());
         holder.textDescricaoCard.setText(cards.get(position).getDescricao());
+        holder.textContatoCard.setText(cards.get(position).getContato());
     }
 
     @Override
@@ -52,12 +53,14 @@ public class ListaCardsAdapter extends RecyclerView.Adapter<ListaCardsAdapter.Li
 
         private TextView textTituloCard;
         private TextView textDescricaoCard;
+        private TextView textContatoCard;
 
         public ListaCardsViewHolder(@NonNull View itemView) {
             super(itemView);
 
             textTituloCard = itemView.findViewById(R.id.text_titulo_card);
             textDescricaoCard = itemView.findViewById(R.id.descrição);
+            textContatoCard = itemView.findViewById(R.id.Contato);
 
         }
     }
